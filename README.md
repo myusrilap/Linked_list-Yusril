@@ -26,3 +26,27 @@ Jika pengguna memasukkan opsi yang tidak valid, program akan menampilkan pesan b
 
 cara kerja program
 
+Fungsi add(item):
+
+Fungsi ini menambahkan sebuah item ke akhir linked list. Jika linked list masih kosong, item tersebut akan menjadi elemen pertama (head) pada linked list. Jika tidak, maka fungsi akan mencari node terakhir pada linked list dengan melakukan traversal dari head sampai ke node terakhir menggunakan loop while. Setelah menemukan node terakhir, item baru akan ditambahkan sebagai node baru setelah node terakhir tersebut. Setiap kali item baru ditambahkan, operasi "add" beserta item yang ditambahkan akan dicatat ke dalam history menggunakan method append.
+
+Fungsi remove(index):
+
+Fungsi ini menghapus item pada index tertentu pada linked list. Pertama-tama, fungsi ini memeriksa apakah linked list kosong atau tidak. Jika kosong, fungsi akan menghasilkan pesan kesalahan dan keluar dari fungsi. Selanjutnya, fungsi memeriksa apakah argumen index yang diberikan valid atau tidak. Jika index yang diberikan kurang dari 0 atau lebih besar atau sama dengan panjang linked list, fungsi akan menghasilkan pesan kesalahan dan keluar dari fungsi.
+
+Jika item yang ingin dihapus adalah elemen pertama, maka elemen pertama (head) akan diganti dengan node berikutnya (yang bisa jadi None jika node pertama adalah node terakhir). Jika tidak, maka fungsi akan mencari node pada index yang diinginkan dengan melakukan traversal dari head sampai node pada index yang diinginkan dengan menggunakan loop while. Setelah menemukan node pada index yang diinginkan, node tersebut akan dihapus dengan mengubah next_node pada node sebelumnya sehingga mengarah ke node setelah node yang dihapus. Setiap kali item dihapus, operasi "remove" beserta item yang dihapus akan dicatat ke dalam history menggunakan method append.
+
+Fungsi display():
+
+Fungsi ini menampilkan daftar belanjaan pada linked list. Jika linked list kosong, fungsi akan menampilkan pesan bahwa daftar belanjaan kosong. Jika tidak, fungsi akan melakukan traversal dari head sampai ke node terakhir dan menampilkan nomor urut dan item pada setiap node menggunakan loop while.
+
+Fungsi display_history():
+
+Fungsi ini menampilkan history operasi pada linked list. Jika history kosong, fungsi akan menampilkan pesan bahwa belum ada operasi yang dilakukan. Jika tidak, fungsi akan melakukan traversal pada history menggunakan loop for, dan menampilkan operasi "add" atau "remove" beserta item yang terkait pada setiap operasi.
+
+Fungsi main():
+
+Fungsi ini merupakan fungsi utama yang berinteraksi dengan pengguna melalui input dan output. Setiap kali pengguna memilih menu 1 atau 2, fungsi akan meminta input dari pengguna dan memanggil fungsi add() atau remove() sesuai dengan input yang diberikan. Setiap kali pengguna memilih menu 3 atau 4, fungsi akan memanggil fungsi display() atau display_history() sesuai dengan pilihan pengguna. Jika pengguna memilih menu 5, program akan keluar dari loop while dan selesai.
+
+Output Program
+
